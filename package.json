@@ -5,7 +5,8 @@
 	"main": "lib/index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"compile": "babel --presets @babel/preset-env,@babel/preset-react --plugins @babel/plugin-proposal-function-bind -d lib/ src/"
+		"compile": "babel --presets @babel/preset-env,@babel/preset-react --plugins @babel/plugin-proposal-function-bind -d lib/ src/",
+		"prepublishOnly": "npm run compile"
 	},
 	"repository": {
 		"type": "git",
