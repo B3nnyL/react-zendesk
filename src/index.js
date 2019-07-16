@@ -1,5 +1,5 @@
-import  { Component } from 'react';
-import PropTypes from 'prop-types';
+import  { Component } from "react"
+import PropTypes from "prop-types"
 
 const canUseDOM = () => {
     if(typeof window === 'undefined' || !window.document || !window.document.createElement ){
@@ -10,30 +10,32 @@ const canUseDOM = () => {
 
 export const ZendeskAPI = (...args) => {
     if (canUseDOM && window.zE) {
-      window.zE.apply(null, args);
+      window.zE.apply(null, args)
     } else {
-      console.warn('Zendesk is not initialized yet');
+      console.warn("Zendesk is not initialized yet")
     }
-  };
+  }
 
 export default class Zendesk extends Component {
+    
     constructor(props) {
         super(props)
         this.insertScript = this.insertScript.bind(this)
       }
     
-      insertScript (key) {
+      insertScript (zendeskKey) {
         const script = document.createElement('script')
         script.async = true
         script.id = 'ze-snippet'
-        script.src = `https://static.zdassets.com/ekr/snippet.js?key=${key}`
+        script.src = `https://static.zdassets.com/ekr/snippet.js?key=${zendeskKey}`
         document.body.appendChild(script)
       }
     
       componentDidMount() {
         if (canUseDOM && !window.zE) {
-          const {key, ...other} = this.props
-          this.insertScript(key)
+          const {zendeskKey, ...other} = this.props
+          console.log(this.props)
+          this.insertScript(zendeskKey)
           window.zESettings = other
         }
       }
@@ -46,9 +48,13 @@ export default class Zendesk extends Component {
         delete window.zESettings
       }
 
-    render(){}
+    render(){
+        return null
+    }
 }
 
-Zendesk.PropTypes = {
-    key: PropTypes.string.isRequired
+Zendesk.propTypes = {
+    zendeskKey: PropTypes.string.isRequired
 }
+
+    
