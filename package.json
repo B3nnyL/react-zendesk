@@ -1,0 +1,37 @@
+{
+	"name": "react-zendesk",
+	"version": "0.0.1",
+	"description": "A component enable Zendesk in your React application",
+	"main": "lib/index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"compile": "babel --presets @babel/preset-env,@babel/preset-react --plugins @babel/plugin-proposal-function-bind -d lib/ src/"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/B3nnyL/react-zendesk.git"
+	},
+	"keywords": [
+		"zendesk",
+		"react",
+		"embeded"
+	],
+	"author": "Shuying Lin <ciao@sylin.me>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/B3nnyL/react-zendesk/issues"
+	},
+	"homepage": "https://github.com/B3nnyL/react-zendesk#readme",
+	"dependencies": {
+		"prop-types": "^15.7.2"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.0.0",
+		"@babel/core": "^7.0.0",
+		"@babel/plugin-proposal-function-bind": "^7.0.0",
+		"@babel/preset-env": "^7.5.4",
+		"@babel/preset-react": "^7.0.0",
+		"eslint": "^6.0.1",
+		"eslint-plugin-react": "^7.14.2"
+	}
+}
