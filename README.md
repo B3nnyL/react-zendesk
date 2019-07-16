@@ -58,7 +58,7 @@ ZendeskAPI("webWidget", "setLocale", "de");
 
 ## Resources
 
-[Zendesk Widget Doc](https://developer.zendesk.com/embeddables/docs/widget)
+[Zendesk Widget Documentation](https://developer.zendesk.com/embeddables/docs/widget)
 
 ## License
 
