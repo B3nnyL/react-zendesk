@@ -1,0 +1,15 @@
+{
+  "name": "react-zendesk",
+  "author": {
+    "name": "Shuying Lin",
+    "email": "ciao@sylin.me",
+    "url": "https://sylin.me/"
+  },
+  "location": {
+    "support": {},
+    "chat": {}
+  },
+  "defaultLocale": "en",
+  "marketingOnly": true,
+  "private": false
+}
