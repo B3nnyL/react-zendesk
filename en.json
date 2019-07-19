@@ -1,0 +1,8 @@
+{
+  "app": {
+    "name": "react-zendesk",
+    "short_description": "A component simplifies Zendesk widget usage in your React application",
+    "long_description": "This component applies to Zendesk Web Widget including contact form, live chat, talk, answer bot and help center. For more information on widget and API, please check Zendesk official documentation",
+    "installation_instructions": "Run command `npm install -save react-zendesk"
+  }
+}
