@@ -34,7 +34,6 @@ export default class Zendesk extends Component {
       componentDidMount() {
         if (canUseDOM && !window.zE) {
           const {zendeskKey, ...other} = this.props
-          console.log(this.props)
           this.insertScript(zendeskKey)
           window.zESettings = other
         }
