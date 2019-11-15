@@ -1,6 +1,6 @@
 {
   "name": "react-zendesk",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A component enable Zendesk in your React application",
   "main": "lib/index.js",
   "scripts": {
