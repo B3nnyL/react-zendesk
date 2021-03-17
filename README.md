@@ -39,7 +39,7 @@ const setting = {
 };
 
 const App = () => {
-  return <Zendesk zendeskKey={ZENDESK_KEY} {...setting} onLoaded={() => console.log('is loaded')} />;
+  return <Zendesk defer zendeskKey={ZENDESK_KEY} {...setting} onLoaded={() => console.log('is loaded')} />;
 };
 
 ReactDOM.render(<App />, document.getElementById("#app"));
