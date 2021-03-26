@@ -9,7 +9,7 @@ const canUseDOM = () => {
 }
 
 export const ZendeskAPI = (...args) => {
-    if (canUseDOM && window.zE) {
+    if (canUseDOM() && window.zE) {
       window.zE.apply(null, args)
     } else {
       console.warn("Zendesk is not initialized yet")
@@ -44,7 +44,7 @@ export default class Zendesk extends Component {
       }
 
       componentDidMount() {
-        if (canUseDOM && !window.zE) {
+        if (canUseDOM() && !window.zE) {
           const {defer, zendeskKey, ...other} = this.props
           this.insertScript(zendeskKey, defer)
           window.zESettings = other
@@ -52,7 +52,7 @@ export default class Zendesk extends Component {
       }
 
       componentWillUnmount(){
-        if (!canUseDOM || !window.zE) {
+        if (!canUseDOM() || !window.zE) {
             return
         }
         delete window.zE
