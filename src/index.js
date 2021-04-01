@@ -66,5 +66,5 @@ export default class Zendesk extends Component {
 
 Zendesk.propTypes = {
     zendeskKey: PropTypes.string.isRequired,
-    defer: PropTypes.boolean
+    defer: PropTypes.bool
 }
