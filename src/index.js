@@ -30,12 +30,15 @@ export default class Zendesk extends Component {
         }
       }
 
-      insertScript (zendeskKey, defer) {
+      insertScript (zendeskKey, defer, nonce) {
         const script = document.createElement('script')
         if (defer) {
           script.defer = true
         } else {
           script.async = true
+        }
+        if (nonce) {
+          script.nonce = nonce
         }
         script.id = 'ze-snippet'
         script.src = `https://static.zdassets.com/ekr/snippet.js?key=${zendeskKey}`
@@ -45,8 +48,8 @@ export default class Zendesk extends Component {
 
       componentDidMount() {
         if (canUseDOM && !window.zE) {
-          const {defer, zendeskKey, ...other} = this.props
-          this.insertScript(zendeskKey, defer)
+          const {defer, zendeskKey, nonce, ...other} = this.props
+          this.insertScript(zendeskKey, defer, nonce)
           window.zESettings = other
         }
       }
@@ -66,5 +69,6 @@ export default class Zendesk extends Component {
 
 Zendesk.propTypes = {
     zendeskKey: PropTypes.string.isRequired,
-    defer: PropTypes.bool
+    defer: PropTypes.bool,
+    nonce: PropTypes.string
 }
