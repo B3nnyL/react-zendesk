@@ -31,6 +31,10 @@ export default class Zendesk extends Component {
       }
 
       insertScript (zendeskKey, defer) {
+        const wasCreate = document.getElementById('ze-snippet')
+        if(wasCreate !== null){
+          wasCreate.remove()
+        }
         const script = document.createElement('script')
         if (defer) {
           script.defer = true
