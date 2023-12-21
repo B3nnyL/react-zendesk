@@ -1,12 +1,12 @@
 import  { Component } from "react"
 import PropTypes from "prop-types"
 
-const canUseDOM = () => {
+const canUseDOM = (() => {
     if(typeof window === 'undefined' || !window.document || !window.document.createElement ){
         return false
     }
     return true
-}
+})();
 
 export const ZendeskAPI = (...args) => {
     if (canUseDOM && window.zE) {
